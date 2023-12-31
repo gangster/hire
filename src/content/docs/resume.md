@@ -12,7 +12,7 @@ A versatile and seasoned software engineer with extensive experience in full-sta
 ## Work Experience
 
 ### [Prismatic](https://www.prismatic.io/)
-#### Senior Backend Engineer | March 2023 - November 2023
+#### Senior Backend Engineer | March 2023 - December 2023
 - **CI/CD Pipeline Development:** Developed multiple GitLab CI/CD pipelines, significantly improving lead times for various projects.
 - **Container Image Standardization:** Designed minimal container images with key language runtimes and tools (e.g., Node.js, Python, AWS SDK, Terraform), using GitLab pipelines for efficient builds. Stored in the internal GitLab registry for seamless deployment in services and CI jobs.
 - **Repository Optimization:** Led the restructuring of a large monorepo into separate repositories, boosting team productivity and deployment agility.
