@@ -1,8 +1,6 @@
 ---
 title: Josh Deeden - Resume
 description: Resume about Josh Deeden, Senior Software Engineer.
-layout: ../layouts/Minimalist.astro
-pdfLink: resume.pdf
 ---
 # Josh Deeden
 **Programmer**
