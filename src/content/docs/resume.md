@@ -1,8 +1,7 @@
 ---
-title: Josh Deeden - Resume
+title: Josh Deeden
 description: Resume about Josh Deeden, Senior Software Engineer.
 ---
-# Josh Deeden
 **Programmer**
 
 Camas, WA, USA | 626-558-1136 | work@deeden.org | [Website](https://josh.deeden.org) | [Github](http://github.com/gangster) | [LinkedIn](http://linkedin.com/in/jdeeden)
