@@ -30,6 +30,17 @@ export default defineConfig({
 								{ label: 'Future Enhancements?', link: '/challenges/google-forms-killer/future' },
 							],
 						},
+						{
+							label: 'Function Refactor',
+							items: [
+								{ label: 'The Challenge', link: '/challenges/function-refactor/challenge' },
+								{ label: 'The Code to Refactor', link: '/challenges/function-refactor/code' },
+								{ label: 'Solution Overview', link: '/challenges/function-refactor/solution' },
+								{ label: 'Refactored Code', link: '/challenges/function-refactor/refactored' },
+								{ label: 'Unit Tests', link: '/challenges/function-refactor/tests' },
+
+							],
+						},						
 					],
 				},
 			],
