@@ -1,0 +1,66 @@
+---
+title: The Challenge
+description: Google Forms Killer - The Challenge
+---
+Your goal is to define the data model persisted in the database and any non-obvious business logic to create and send custom forms like in Google Forms. You should approach this problem as if you're building Google Forms, not a feature in Ashby.
+
+## Requirements
+The data model should express how custom forms are designed, sent, and submitted. For simplicity, don't define a user model or how authentication works. Assume, like in Google Forms, a user can submit a survey anonymously.
+
+## Field Types
+Support the following form fields:
+
+- Plain text box
+- Email text box
+- Single select dropdown
+- Boolean field
+- File field
+
+## Persistence
+The data model should reflect what is persisted in the database and, for simplicity, should be represented as objects with properties and relationships to other objects. Define it as you would in an ORM like ActiveRecord (rather than as tables in SQL). Assume that you're designing an API for a stateless server.
+
+## Conditional Fields
+We want a user to define a field that only becomes visible if a previous field has a specific value. Users can combine conditions with ANDs and ORs. For example:
+1. Do you like lunch? (Y/N)
+2. Do you like toast? (Y/N)
+3. Do you like pancakes? (Y/N)
+4. Do you like brunch? (Y/N) 
+   - Conditional on: `(1 == Y AND (2 == Y OR 3 == Y))`
+
+## And Anything Else
+
+Document any other requirements, details, or considerations important for this product.
+
+## Expectations
+Here's an incomplete example of what a data model definition could look like:
+
+### Data Model
+```markdown
+# Data Model
+
+Form
+ - id
+ - title
+ - fields: Field[] // Order in array is order displayed
+
+Field
+ - id
+ - question: string
+```
+With this example, we can understand the organization of data, relationships, and usage in fulfilling product requirements.   
+Explain what might not be obvious, and don't agonize over every detail, only the ones that matter. Notice that we don't specify types on every property.
+
+## What Does Excellent Look Like?
+
+We like to be upfront about what excellent looks like — in doing so, we get the chance to see what you're capable of at your best.
+
+Think about what Google Forms does and what kind of users it has. Consider what the product should do and then start defining the technical details. Engineers at Ashby put on their product manager hats, and we expect you to do the same here (but within the confines of the time allotted)!
+
+Excellent writeups or live sessions:
+
+- State assumptions made
+- Consider product and technical edge cases
+- Focus on explaining why the design is like it is
+- Consider and describe what might need to change or be built to make this product better (e.g., support more use cases, handle scale)
+- Are succinct and easy to read. Strong submissions are often under 2 pages
+- Also, remember that it's an interview, and you have less time than you'd have in a typical work environment. Cover the essential requirements and be intentional about where you go above and beyond.

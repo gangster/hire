@@ -1,0 +1,192 @@
+---
+title: Data Model
+description: Google Forms Killer
+---
+
+This document proposes a data model for a Google Forms killer, focusing on flexibility, scalability, and enhanced user interaction.
+
+### **Form Model**
+
+Provides comprehensive structure for forms, including essential metadata and an ordered field layout.
+
+```
+struct Form {
+    id: String, // cuid
+    title: String,
+    description: String, // Optional
+    fields: Vector<String>, // Ordered array of Field IDs
+    createdAt: DateTime, // default now
+    updatedAt: DateTime, // updated at
+}
+```
+
+### **Field Types Enumeration**
+
+Enumerating field types standardizes input options.
+
+```
+enum FieldType {
+    Text,
+    Email,
+    Dropdown,
+    Radio,
+    File
+}
+```
+
+### **Field Model**
+
+Supports various field types with additional features like dropdown options and conditional visibility.
+
+```
+struct Field {
+    id: String, // cuid
+    formId: String, // Link to Form ID
+    question: String,
+    fieldType: FieldType, // Reference to FieldType enum
+    options: Object, // Optional, used for dropdowns and similar types
+    conditionals: Object, // Optional, Conditionals object
+    fileUploads: Vector<String>, // Optional, IDs of FileUploads
+}
+```
+
+### Field Options Example
+
+Enables flexibility in defining dropdown options, allowing for customization without altering the database schema.
+
+```json
+{
+  "options": [
+    "Option 1",
+    "Option 2",
+    "Option 3"
+  ]
+}
+```
+
+### Field Conditionals Example
+
+Provides a structured and flexible approach to defining conditional visibility rules.
+
+```json
+{
+    "logic": "AND",
+    "rules": [
+        {
+            "fieldId": "field_1",
+            "operator": "EQUALS",
+            "value": "Yes"
+        },
+        {
+            "logic": "OR",
+            "rules": [
+                {
+                    "fieldId": "field_2",
+                    "operator": "NOT_EQUALS",
+                    "value": "No"
+                },
+                {
+                    "fieldId": "field_3",
+                    "operator": "GREATER_THAN",
+                    "value": "5"
+                }
+            ]
+        }
+    ]
+}
+```
+
+### **FileUpload Model**
+
+Manages file attachments, linking them to fields with necessary metadata.
+
+```
+struct FileUpload {
+    id: String, // cuid
+    fieldId: String, // Link to Field ID
+    fileName: String,
+    fileSize: Number,
+    fileType: String,
+    fileUrl: String, // URL to access the uploaded file
+    createdAt: DateTime, // default now
+}
+```
+
+### **Submission Model**
+
+Captures user responses and associated metadata for each form submission, enabling detailed analysis and tracking.
+
+```
+struct Submission {
+    id: String, // cuid
+    formId: String, // Link to Form ID
+    responses: Object, // Object structure to store responses
+    metadata: Object, // Optional, metadata like submission time, user agent
+    createdAt: DateTime, // default now
+}
+```
+
+### Responses Object Example
+
+Efficiently captures varied responses, adaptable to different field types.
+
+```json
+{
+  "responses": [
+    {
+      "fieldId": "field1",
+      "responseType": "Text",
+      "text": "This is a response to a text field."
+    },
+    {
+      "fieldId": "field2",
+      "responseType": "Dropdown",
+      "selectedOption": "Option 2"
+    },
+    {
+      "fieldId": "field3",
+      "responseType": "Boolean",
+      "boolean": true},
+    {
+      "fieldId": "field4",
+      "responseType": "File",
+      "fileId": "file_12345"
+    }
+  ]
+}
+
+```
+
+### Metadata Object Example
+Provides valuable context for each submission.
+```json
+{
+  "metadata": {
+    "submissionTime": "2021-07-21T15:30:00Z",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+    "ipAddress": "192.168.1.1",
+    "location": {
+      "country": "USA",
+      "city": "New York"
+    },
+    "tracking": {
+      "campaignId": "12345",
+      "referrer": "email"
+    }
+  }
+}
+```
+
+### CustomLink Model
+Manages the creation and tracking of unique links for sharing forms, enabling control over link distribution, access, and analytics.
+
+```
+struct CustomLink {
+    id: String, // cuid
+    formId: String, // Link to Form ID
+    createdAt: DateTime, // When the link was created, default now
+    expiryDate: DateTime, // Optional, when the link expires
+    isActive: Boolean, // If the link is currently active
+    customUrl: String, // Optional, a custom URL for the link
+}
+```
