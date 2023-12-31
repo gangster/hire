@@ -1,8 +1,13 @@
 ---
-title: Josh Deeden 
+title: Josh Deeden - Resume
 description: Resume about Josh Deeden, Senior Software Engineer.
+layout: ../layouts/Minimalist.astro
+pdfLink: resume.pdf
 ---
-Camas, WA, USA | 626-558-1136 | work@deeden.org | [Github](http://github.com/gangster) | [LinkedIn](http://linkedin.com/in/jdeeden)
+# Josh Deeden
+**Programmer**
+
+Camas, WA, USA | 626-558-1136 | work@deeden.org | [Website](https://josh.deeden.org) | [Github](http://github.com/gangster) | [LinkedIn](http://linkedin.com/in/jdeeden)
 
 A versatile and seasoned software engineer with extensive experience in full-stack development, infrastructure, DevOps, and cloud engineering. Skilled in both backend and frontend technologies, I bring a holistic approach to building and managing robust, scalable distributed systems. My passion lies in automating workflows and enhancing developer experience, ensuring seamless and flexible integration and operation of complex systems. Seeking senior or staff-level roles in platform engineering or full-stack development, I am dedicated to designing and implementing solutions that are not only efficient and reliable but also scalable and future-proof.
 
