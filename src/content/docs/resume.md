@@ -51,5 +51,6 @@ A versatile and seasoned software engineer with extensive experience in full-sta
 
 ## Certifications
 - [Certified Kubernetes Application Developer](https://www.credly.com/badges/591ddb29-fe6d-4b36-ba62-b00f278b3a9f/public_url)
+- [HashiCorp Certified: Terraform Associate (003)](https://www.credly.com/badges/8247b9fa-b89a-4728-83fa-1301d2dd137d/)
 - [AWS Certified Solutions Architect - Associate](https://www.credly.com/badges/ebdb09ae-1c1d-45b2-894a-0502d4e2b701/public_url)
 - [AWS Certified Cloud Practitioner](https://www.credly.com/badges/96124598-47c7-4f5d-8951-f1a6f3064a0b/public_url)
