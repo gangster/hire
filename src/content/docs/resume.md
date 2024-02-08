@@ -48,6 +48,7 @@ As an engineer specializing in web and cloud infrastructure, my focus is on deve
 - **Monorepo Management:** NX, Turborepo, Lerna
 
 ## Certifications
+- [Certified Kubernetes Administrator](https://www.credly.com/badges/fb25eaba-3561-49d2-8145-71eb075ac520/public_url)
 - [Certified Kubernetes Application Developer](https://www.credly.com/badges/591ddb29-fe6d-4b36-ba62-b00f278b3a9f/public_url)
 - [HashiCorp Certified: Terraform Associate (003)](https://www.credly.com/badges/8247b9fa-b89a-4728-83fa-1301d2dd137d/public_url)
 - [AWS Certified Solutions Architect - Associate](https://www.credly.com/badges/ebdb09ae-1c1d-45b2-894a-0502d4e2b701/public_url)
